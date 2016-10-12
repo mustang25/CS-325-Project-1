@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Calculate the running time of a program
 # Created by John Blakey
 # From Question 7 of HW1
