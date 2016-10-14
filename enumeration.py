@@ -35,12 +35,17 @@ def better_enumeration(array):
                 start_index = i
                 end_index = j + 1
 
+        if current_sum > max_sum:
+            max_sum = current_sum
+            start_index = i
+            end_index = j + 1
+
     return array[start_index:end_index], max_sum
 
 
 if __name__ == '__main__':
-    arr = [-12, -42, -11]
-    return_vals = enumeration(arr)
+    arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+    return_vals = better_enumeration(arr)
 
     print("{}\n{}\n{}".format(arr, return_vals[0], return_vals[1]))
 
