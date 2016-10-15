@@ -27,7 +27,7 @@ def max_sum_cross_subarray(array, low, middle, high):
 	# left subarray (low to middle)
 	temp_sum = 0
 	left_sum = 0
-	max_left = 0
+	max_left = middle - 1
 	for i in range(middle, -1, -1):
 		temp_sum += array[i]
 		if temp_sum > left_sum:
@@ -37,7 +37,7 @@ def max_sum_cross_subarray(array, low, middle, high):
 	# right subarray (middle + 1 to high)
 	temp_sum = 0
 	right_sum = 0
-	max_right = 0
+	max_right = middle
 	for i in range(middle + 1, high + 1):
 		temp_sum += array[i]
 		if temp_sum > right_sum:
@@ -75,12 +75,12 @@ def max_sum_sequence(array):
 
 max_sum_sequence([4, 4, -10, 3, -2, 1])
 
-#max_sum_sequence([-2])
+max_sum_sequence([-2, 1])
 
-max_sum_sequence([-2, -5, 6, -2, -3, 1, 5])
+max_sum_sequence([-2, -5, 6, -2, -3, 1, 5, 8])
 #answer [6, -2, -3, 1, 5] = 7
 
-#max_sum_sequence([4, 3, -10, 3, -1, 2, 0, -3, 5, 7, -4, -8, -10, 4, 7, -30, -2, -6, 4, 7])
+max_sum_sequence([4, 3, -10, 3, -1, 2, 0, -3, 5, 7, -4, -8, -10, 4, 7, -30, -2, -6, 4, 7])
 
 execution_time = time.time() - start_time
 print ("\n\nexecution_time: {}".format(execution_time))
