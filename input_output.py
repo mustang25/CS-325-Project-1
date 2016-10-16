@@ -9,7 +9,7 @@ from algo3_divide_and_conquer import divide_and_conquer
 from algo4_linear import linear
 
 test_arrays = []
-text_output = open('test_out.txt', 'w')
+text_output = open('MSS_Results.txt', 'w')
 
 
 def write_results(a, r):
