@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-import algo1_enumeration
+#algo 1
 from algo2_better_enumeration import enumeration
+#algo 2
+from algo2_better_enumeration import better_enumeration
+#algo 3
+from algo3_divide_and_conquer import divide_and_conquer
+#algo 4
 from algo4_linear import linear
-
 
 test_arrays = []
 text_output = open('test_out.txt', 'w')
@@ -33,23 +37,22 @@ with open('MSS_Problems.txt', 'r') as text_input:
 # This iterates over each array that we are testing and calls the enumeration function. The results
 # are then written to a file called "test_out.txt". The output file name will be changed before
 # we submit, I just wanted to avoid overwriting the file that was given to us from the prof.
-
-
-
 for array in test_arrays:
-
-    text_output.write("Results for Algo 1 - enumeration\n")
-    results = algo1_enumeration.max_sum_sub_sequence(array)
-    write_results(array, results)
-
-    text_output.write("Results for Algo 2 - better enumeration\n")
+    text_output.write("Results for Enumeration Algo 1\n")
     results = enumeration(array)
     write_results(array, results)
 
-    text_output.write("Results for Algo 4 - linear\n")
-    results = linear(array)
+    text_output.write("Results for Better Enumeration Algo 2\n")
+    results = enumeration(array)
     write_results(array, results)
 
+    text_output.write("Results for Divide and Conquer Algo 3\n")
+    reults = divide_and_conquer(array)
+    write_results(array, results)
+
+    text_output.write("Results for Linear Algo 4\n")
+    results = linear(array)
+    write_results(array, results)
 
 text_output.close()
 
