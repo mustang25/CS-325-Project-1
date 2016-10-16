@@ -69,11 +69,6 @@ def divide_and_conquer(array):
 	answer_array = max_sum_subarray(array, 0, len(array) - 1)
 
 	execution_time = time.time() - start_time
-	print ("\n\nexecution_time: {}".format(execution_time))
-
-	print_array(array)
-	print_array(array[answer_array[1]:answer_array[2] + 1])
-	print(answer_array[0])
 
 	return execution_time
 
