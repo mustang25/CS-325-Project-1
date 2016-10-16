@@ -7,4 +7,14 @@
 
 ## How to Run
 
+Go to the directory with the unzipped files:
+algo2_better_enumeration.py	// note this file contains algo 1 and 2
+algo3_divide_and_conquer.py
+algo4_linear.py
+MSS_Problems.txt
+input_output.py
+
+Terminal run
 `python3 input_output.py`
+
+This will output the file MSS_Results.txt
