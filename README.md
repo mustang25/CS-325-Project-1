@@ -7,4 +7,4 @@
 
 ## How to Run
 
-Coming soon...
+`python3 input_output.py`

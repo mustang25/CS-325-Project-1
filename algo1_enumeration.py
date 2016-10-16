@@ -2,7 +2,7 @@ import time
 
 
 
-start_time = time.time()
+# start_time = time.time()
 
 
 
@@ -26,8 +26,8 @@ def max_sum_sub_sequence(integers):
 		
 
 
-print max_sum_sub_sequence([4, 3, -10, 3, -1, 2, 0, -3, 5, 7, -4, -8, -10, 4, 7, -30, -2, -6, 4, 7])
+# print max_sum_sub_sequence([4, 3, -10, 3, -1, 2, 0, -3, 5, 7, -4, -8, -10, 4, 7, -30, -2, -6, 4, 7])
 
 
-execution_time = time.time() - start_time
-print "\n\nexecution_time: {}".format(execution_time)
+# execution_time = time.time() - start_time
+# print "\n\nexecution_time: {}".format(execution_time)
