@@ -24,12 +24,12 @@ for size in n:
 
     average = total_time/10
 
-    text_output.write("{}\t\t\t{}\n\n".format(size, average))
+    text_output.write("{}\t\t\t{}\n".format(size, average))
 
 # Algorithm 2 testing
 total_time = 0
 n = [100, 200, 300, 400, 500, 1000, 2000, 4000, 8000, 10000]
-text_output.write("Better Enumeration Results:\n")
+text_output.write("\nBetter Enumeration Results:\n")
 text_output.write("Array Size\tRunning Time\n")
 for size in n:
     total_time = 0
@@ -42,10 +42,10 @@ for size in n:
 
     average = total_time/10
 
-    text_output.write("{}\t\t\t{}\n\n".format(size, average))
+    text_output.write("{}\t\t\t{}\n".format(size, average))
 
 # Algorithm 3 testing
-text_output.write("Divide & Conquer Results:\n")
+text_output.write("\nDivide & Conquer Results:\n")
 text_output.write("Array Size\tRunning Time\n")
 for size in n:
     total_time = 0
@@ -55,10 +55,12 @@ for size in n:
 
     average = total_time/10
 
-    text_output.write("{}\t\t\t{}\n\n".format(size, average))
+    text_output.write("{}\t\t\t{}\n".format(size, average))
+
 
 # Algorithm 4 testing
-text_output.write("Linear Results:\n")
+n = [1000, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000]
+text_output.write("\nLinear Results:\n")
 text_output.write("Array Size\tRunning Time\n")
 for size in n:
     total_time = 0
@@ -71,6 +73,6 @@ for size in n:
 
     average = total_time/10
 
-    text_output.write("{}\t\t\t{}\n\n".format(size, average))
+    text_output.write("{}\t\t\t{}\n".format(size, average))
 
 text_output.close()
