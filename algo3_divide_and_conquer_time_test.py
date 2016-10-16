@@ -3,9 +3,7 @@
 # Source example: http://www.geeksforgeeks.org/divide-and-conquer-maximum-sum-subarray/
 
 import time
-
-
-start_time = time.time()
+import random
 
 def print_array(array):
 	print('[', end='')
@@ -66,21 +64,43 @@ def max_sum_subarray(array, low, high):
 				max_sum_cross_subarray(array, low, middle, high))
 
 def divide_and_conquer(array):
-	print_array(array)
+	start_time = time.time()
+
 	answer_array = max_sum_subarray(array, 0, len(array) - 1)
+
+	execution_time = time.time() - start_time
+	print ("\n\nexecution_time: {}".format(execution_time))
+
+	print_array(array)
 	print_array(array[answer_array[1]:answer_array[2] + 1])
 	print(answer_array[0])
 
-#Test Cases:
+	return execution_time
 
-divide_and_conquer([4, 4, -10, 3, -2, 1])
+#main
+array_size = int(input('Input integer for the size of an array to test the algorithm: '))
 
-divide_and_conquer([-2, 1])
+iterations = 10
+total_time = 0
 
-divide_and_conquer([-2, -5, 6, -2, -3, 1, 5])
-#answer [6, -2, -3, 1, 5] = 7
+for i in range(0, iterations):
+	test_array = [None] * array_size
+	for j in range(0, array_size):
+		test_array[j] = random.randint(-100, 100)
 
-divide_and_conquer([4, 3, -10, 3, -1, 2, 0, -3, 5, 7, -4, -8, -10, 4, 7, -30, -2, -6, 4, 7])
+	total_time += divide_and_conquer(test_array)
 
-execution_time = time.time() - start_time
-print ("\n\nexecution_time: {}".format(execution_time))
+print('Average time =', total_time / iterations, "\nn =", array_size)
+
+#output information to text file
+text_output = open('algo3_time_results', 'a')
+
+# copy 'n tab average_time(seconds) on the first line'
+text_output.write(str(array_size))
+text_output.write(str("\t"))
+text_output.write(str(total_time / iterations))
+
+text_output.close()
+
+#n = 100, 200,...,900 or 1000,2000,...,10000
+# 10 different input arrays for each
