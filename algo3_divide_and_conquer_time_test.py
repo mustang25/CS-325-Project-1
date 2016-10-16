@@ -77,30 +77,30 @@ def divide_and_conquer(array):
 
 	return execution_time
 
-#main
-array_size = int(input('Input integer for the size of an array to test the algorithm: '))
-
-iterations = 10
-total_time = 0
-
-for i in range(0, iterations):
-	test_array = [None] * array_size
-	for j in range(0, array_size):
-		test_array[j] = random.randint(-100, 100)
-
-	total_time += divide_and_conquer(test_array)
-
-print('Average time =', total_time / iterations, "\nn =", array_size)
-
+#main_test (commenting out below to run full test script)
+#array_size = int(input('Input integer for the size of an array to test the algorithm: '))
+#
+#iterations = 10
+#total_time = 0
+#
+#for i in range(0, iterations):
+#	test_array = [None] * array_size
+#	for j in range(0, array_size):
+#		test_array[j] = random.randint(-100, 100)
+#
+#	total_time += divide_and_conquer(test_array)
+#
+#print('Average time =', total_time / iterations, "\nn =", array_size)
+#
 #output information to text file
-text_output = open('algo3_time_results', 'a')
-
+#text_output = open('algo3_time_results', 'a')
+#
 # copy 'n tab average_time(seconds) on the first line'
-text_output.write(str(array_size))
-text_output.write(str("\t"))
-text_output.write(str(total_time / iterations))
-
-text_output.close()
-
+#text_output.write(str(array_size))
+#text_output.write(str("\t"))
+#text_output.write(str(total_time / iterations))
+#
+#text_output.close()
+#
 #n = 100, 200,...,900 or 1000,2000,...,10000
 # 10 different input arrays for each
