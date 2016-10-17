@@ -43,11 +43,11 @@ for array in test_arrays:
     write_results(array, results)
 
     text_output.write("Results for Better Enumeration Algo 2\n")
-    results = enumeration(array)
+    results = better_enumeration(array)
     write_results(array, results)
 
     text_output.write("Results for Divide and Conquer Algo 3\n")
-    reults = divide_and_conquer(array)
+    results = divide_and_conquer(array)
     write_results(array, results)
 
     text_output.write("Results for Linear Algo 4\n")
